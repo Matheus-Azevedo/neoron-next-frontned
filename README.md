@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NEORON Flight Management System - Frontend
 
-## Getting Started
+## Descrição
 
-First, run the development server:
+Este repositório contém o frontend da aplicação de gerenciamento de voos da empresa de aviação, desenvolvido com **Next.js**. O objetivo do frontend é fornecer uma interface intuitiva e de fácil uso para os funcionários da empresa, permitindo a visualização, criação e edição de voos.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tecnologias
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Next.js**: Framework JavaScript para construção da interface de usuário.
+- **Tailwind.css**: Framework de CSS utilitário que oferece uma maneira rápida e eficiente de criar interfaces de usuário (UIs) sem escrever CSS personalizado.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Requisitos do Sistema
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Node.js** (v14 ou superior)
+- **npm** (v6 ou superior)
 
-## Learn More
+## Instalação e Configuração
 
-To learn more about Next.js, take a look at the following resources:
+1.  Clone este repositório:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    `git clone https://github.com/neoron-challenge/frontend.git`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+cd frontend`
 
-## Deploy on Vercel
+2.  Instale as dependências:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    `npm install`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3.  Inicie o servidor de desenvolvimento:
+
+    `npm run dev`
+
+4.  Acesse a aplicação no navegador:
+
+    `http://localhost:3000`
+
+## Funcionalidades Principais
+
+- **Listagem de Voos**: Exibe a lista de voos registrados no sistema, com opções para filtrar e ordenar.
+- **Cadastro de Voos**: Formulário para adicionar novos voos com base nas regras de negócio.
+- **Edição de Voos**: Possibilidade de editar os dados de um voo existente.
+- **Validação de Regras de Negócio**: O sistema garante que não serão criados dois voos para o mesmo destino no mesmo dia, e que haverá pelo menos 30 minutos de diferença entre os voos.
+
+## Documentação
+
+<img src="./docs/peek_3.jpg" alt="ER Diagram" width="100%"/>
+
+- **Figma**: [Link para o design](https://www.figma.com/design/2CafTFKGGufOGCRwL7b9VO/Neoron-Test---Figma?node-id=0-1&node-type=canvas&t=gAGmbURtT5hsDg4L-0/)
