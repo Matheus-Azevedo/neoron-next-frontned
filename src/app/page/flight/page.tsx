@@ -98,18 +98,23 @@ export default function FlightPage() {
                     <div className="flex space-x-4">
                         <button
                             onClick={handleRefresh}
+                            data-testid="btn-refresh"
                             className="flex aspect-square h-20 items-center justify-center rounded-full bg-gray-700 text-white shadow-2xl drop-shadow-2xl hover:bg-gray-600"
                         >
                             <ArrowsClockwise size={32} />
                         </button>
                         <button
                             onClick={() => setOpenModal(1)}
+                            data-testid="btn-add"
                             className="flex aspect-square h-20 items-center justify-center rounded-full bg-gray-700 text-white shadow-2xl drop-shadow-2xl hover:bg-gray-600"
                         >
                             <Plus size={32} />
                         </button>
                         <Link href="/">
-                            <button className="flex aspect-square h-20 items-center justify-center rounded-full bg-gray-700 text-white shadow-2xl drop-shadow-2xl hover:bg-gray-600">
+                            <button
+                                data-testid="btn-signOut"
+                                className="flex aspect-square h-20 items-center justify-center rounded-full bg-gray-700 text-white shadow-2xl drop-shadow-2xl hover:bg-gray-600"
+                            >
                                 <SignOut size={32} />
                             </button>
                         </Link>
@@ -124,7 +129,7 @@ export default function FlightPage() {
                             <tr>
                                 <th className="w-20 py-2 text-center">#</th>
                                 <th className="w-20 py-2 text-center">
-                                    CÓDIGO
+                                    CODIGO
                                 </th>
                                 <th className="w-20 py-2 text-center">
                                     ORIGEM
@@ -199,6 +204,7 @@ export default function FlightPage() {
                                         <td className="py-2">
                                             <div className="flex h-full w-full items-center justify-center">
                                                 <button
+                                                    data-testid="btn-edit"
                                                     onClick={() => {
                                                         setOpenModal(2);
                                                         setFlightData(flight);
