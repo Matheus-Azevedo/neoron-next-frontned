@@ -122,21 +122,21 @@ export default function FlightPage() {
                     <table className="max-w-8xl h-40 w-full rounded-3xl text-2xl text-gray-500">
                         <thead className="rounded-full border-b-4 border-gray-500">
                             <tr>
-                                <th className="w-1/6 py-2 text-center">#</th>
-                                <th className="w-1/6 py-2 text-center">
+                                <th className="w-20 py-2 text-center">#</th>
+                                <th className="w-20 py-2 text-center">
                                     CÓDIGO
                                 </th>
-                                <th className="w-1/6 py-2 text-center">
+                                <th className="w-20 py-2 text-center">
                                     ORIGEM
                                 </th>
-                                <th className="w-1/6 py-2 text-center">
+                                <th className="w-20 py-2 text-center">
                                     DESTINO
                                 </th>
-                                <th className="w-1/6 py-2 text-center">DATA</th>
-                                <th className="w-1/6 py-2 text-center">
+                                <th className="w-20 py-2 text-center">DATA</th>
+                                <th className="w-20 py-2 text-center">
                                     EDITAR
                                 </th>
-                                <th className="w-1/6 py-2 text-center">
+                                <th className="w-20 py-2 text-center">
                                     REMOVER
                                 </th>
                             </tr>
