@@ -94,7 +94,6 @@ export default function CreateFlightModal({ closeModal }: CreateFlightProps) {
             destinationState: cepDestinoData?.estado || '',
             date: new Date(dateTime),
         };
-        console.log(newFlight);
         if (
             !newFlight.originCountry ||
             !newFlight.originCep ||

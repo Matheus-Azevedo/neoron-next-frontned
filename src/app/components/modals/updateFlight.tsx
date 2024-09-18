@@ -37,7 +37,6 @@ export default function UpdateFlightModal({
             });
 
             const formattedDate = saoPauloDate.replace(' ', 'T').slice(0, 16);
-            console.log(formattedDate);
             setDateTime(formattedDate);
         }
     }, [flight]);
