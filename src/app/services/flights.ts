@@ -15,7 +15,7 @@ export interface FlightRequest {
 export async function createFlight(newFlight: FlightRequest): Promise<string> {
     try {
         const { data } = await axios.post(
-            `${process.env.NEXT_PUBLIC_API_URL_LOCAL}/flights`,
+            `${process.env.NEXT_PUBLIC_API_URL_PROD}/flights`,
             newFlight
         );
         if (data) {
@@ -53,7 +53,7 @@ export interface FlightResponse {
 export async function getFlights(): Promise<FlightResponse[] | string> {
     try {
         const { data } = await axios.get(
-            `${process.env.NEXT_PUBLIC_API_URL_LOCAL}/flights`
+            `${process.env.NEXT_PUBLIC_API_URL_PROD}/flights`
         );
         return data.data;
     } catch (error) {
@@ -74,7 +74,7 @@ export async function getFlights(): Promise<FlightResponse[] | string> {
 export async function deleteFlight(id: number): Promise<string> {
     try {
         const { data } = await axios.delete(
-            `${process.env.NEXT_PUBLIC_API_URL_LOCAL}/flights/${id}`
+            `${process.env.NEXT_PUBLIC_API_URL_PROD}/flights/${id}`
         );
         console.log(data);
         if (data) {
@@ -101,7 +101,7 @@ export async function updateFlight(
 ): Promise<string> {
     try {
         const { data } = await axios.patch(
-            `${process.env.NEXT_PUBLIC_API_URL_LOCAL}/flights/${id}`,
+            `${process.env.NEXT_PUBLIC_API_URL_PROD}/flights/${id}`,
             newFlight
         );
         console.log(data);
