@@ -61,14 +61,14 @@ export async function getFlights(): Promise<FlightResponse[] | string> {
             console.error(error.response?.data);
             return (
                 (error.response?.data?.message as string) ||
-                'Falha ao criar voo'
+                'Falha ao buscar voos'
             );
         } else if (error instanceof Error) {
             console.error('Unexpected error', error.message);
             return 'Um erro inesperado ocorreu';
         }
     }
-    return 'Falha ao criar voo';
+    return 'Falha ao buscar voos';
 }
 
 export async function deleteFlight(id: number): Promise<string> {
