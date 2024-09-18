@@ -1,50 +1,52 @@
-import Image from "next/image";
-import "./page.module.css";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
-export default function App() {
-  return (
-    <main className="flex h-screen bg-grayLight">
-      {/* Seção da imagem */}
-      <section className="w-1/2 h-full relative flex items-center justify-center">
-        <h1 className="absolute top-4 left-4 text-white text-8xl font-bold z-10 italic">
-          New Airlines
-        </h1>
-        <Image
-          src="/photo-login.jpg"
-          alt="Hero"
-          fill
-          style={{ objectFit: "cover" }}
-        />
-      </section>
+export default function AppPage() {
+    return (
+        <main className="flex h-screen bg-white">
+            {/* Seção da imagem */}
+            <section className="relative flex h-full w-1/2 items-center justify-center">
+                <h1 className="absolute left-4 top-4 z-10 text-8xl font-bold italic text-white">
+                    New Airlines
+                </h1>
+                <Image
+                    src="/photo-login.jpg"
+                    alt="Hero"
+                    className="border-white"
+                    fill
+                    style={{
+                        objectFit: 'cover',
+                    }}
+                />
+            </section>
 
-      {/* Seção do formulário */}
-      <section className="w-1/2 flex items-center justify-center">
-        <form className="bg-white flex flex-col space-y-6 p-32 rounded-3xl shadow-lg w-8/12">
-          <h1 className="text-grayLight text-6xl font-bold z-10 italic text-center">
-            N-Air Access
-          </h1>
-          <label className="flex flex-col space-y-2">
-            <input
-              type="email"
-              placeholder="Usuário"
-              className="bg-grayLight border border-grayLight p-6 rounded-full w-full outline-none"
-            />
-          </label>
-          <label className="flex flex-col space-y-2">
-            <input
-              type="password"
-              placeholder="Senha"
-              className="bg-grayLight border border-grayLight p-6 rounded-full w-full outline-none"
-            />
-          </label>
-          <Link href="/page/flight">
-            <button className="bg-blue-500 text-white p-6 rounded-full hover:bg-blue-600 w-full">
-              Log in
-            </button>
-          </Link>
-        </form>
-      </section>
-    </main>
-  );
+            {/* Seção do formulário */}
+            <section className="flex w-1/2 items-center justify-center">
+                <form className="flex w-8/12 flex-col space-y-6 rounded-3xl bg-white p-32 shadow-2xl drop-shadow-2xl">
+                    <h1 className="z-10 text-center text-6xl font-bold italic text-gray-500">
+                        N-Air Access
+                    </h1>
+                    <label className="flex flex-col space-y-2">
+                        <input
+                            type="email"
+                            placeholder="Usuário"
+                            className="w-full rounded-full border-white bg-white p-6 text-2xl placeholder-gray-500 shadow-2xl outline-none drop-shadow-2xl"
+                        />
+                    </label>
+                    <label className="flex flex-col space-y-2">
+                        <input
+                            type="password"
+                            placeholder="Senha"
+                            className="w-full rounded-full border-white bg-white p-6 text-2xl placeholder-gray-500 shadow-2xl outline-none drop-shadow-2xl"
+                        />
+                    </label>
+                    <Link href="/page/flight">
+                        <button className="w-full rounded-full bg-gray-700 p-6 text-2xl text-white shadow-2xl hover:bg-gray-600">
+                            Log in
+                        </button>
+                    </Link>
+                </form>
+            </section>
+        </main>
+    );
 }
